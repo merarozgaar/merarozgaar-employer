@@ -1,0 +1,116 @@
+@import 'colors';
+@import "fonts";
+//@import "layout";
+@import 'variables';
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .h1 {
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+h2, .h2, h3, .h3, h4, .h4, .navbar-brand {
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+table {
+  white-space: nowrap !important;
+
+  &.table-hover {
+    tr:hover {
+      background-color: var(--light);
+    }
+  }
+
+  td {
+    vertical-align: middle !important;
+  }
+}
+
+input[type='time']::-webkit-clear-button {
+  display: none !important;
+}
+
+select.form-control.is-invalid {
+  background-position: right calc(1em + 0.3rem) center;
+}
+
+.dropdown {
+  &-toggle {
+    &::after {
+      display: none !important;
+    }
+  }
+
+  &-menu {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  &-item {
+    &.active,
+    &:active {
+      color: unset !important;
+      background-color: unset !important;
+    }
+  }
+}
+
+:disabled {
+  cursor: not-allowed;
+}
+
+.toast-container {
+  padding: 0.5rem 1rem;
+}
+
+.btn {
+  font-weight: $font-weight-bold !important;
+}
+
+.border-img {
+  box-shadow: 50px -50px #f8f9fa !important;
+}
+
+*[role="tablist"] {
+  .nav-link {
+    font-weight: $font-weight-bold;
+    color: $secondary;
+  }
+
+  .nav-link.active {
+    background-color: $secondary !important;
+    border-radius: 0 !important;
+  }
+}
+
+.shadow-sm {
+  //box-shadow: none !important;
+}
+
+.sm-img {
+  path {
+    fill: $primary;
+  }
+}
+
+.custom-navbar {
+  background-color: rgb(245,245,220) !important;
+
+  .navbar {
+    background-color: rgb(245,245,220) !important;;
+  }
+}

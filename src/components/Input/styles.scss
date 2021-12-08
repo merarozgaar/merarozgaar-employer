@@ -1,0 +1,83 @@
+@import 'src/styles/variables';
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  font-family: inherit;
+
+  &-popper {
+    z-index: 3000;
+  }
+
+  &__header {
+    border-bottom: 0;
+    background-color: var(--white);
+  }
+
+  &__current-month {
+    font-weight: $font-weight-bold;
+  }
+
+  &__day {
+    font-size: 13px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: var(--light);
+      border-radius: 50%;
+    }
+
+    &-name {
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+
+    &--selected {
+      font-weight: $font-weight-bold;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 50%;
+
+      &:not(&--today):hover {
+        color: var(--white) !important;
+        background-color: var(--primary) !important;
+        border-radius: 50%;
+      }
+    }
+
+    &--today:not(&--selected) {
+      font-weight: $font-weight-bold;
+      color: var(--primary);
+      background-color: var(--white);
+
+      &:hover {
+        color: var(--primary) !important;
+        //background-color: var(--white) !important;
+      }
+    }
+  }
+}
+
+.rc-time-picker-input {
+  padding: 0;
+  font-size: inherit !important;
+  color: inherit !important;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+.rc-time-picker-clear {
+  display: none;
+  pointer-events: none;
+}
+
+.rc-time-picker-panel {
+  z-index: 3000;
+
+  .rc-time-picker-panel-inner {
+    border: 0;
+    border-radius: 0;
+  }
+}
